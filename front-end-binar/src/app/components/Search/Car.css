@@ -1,0 +1,28 @@
+.result-card {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  width: 333px;
+
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.result-card > img {
+  height: 200px;
+}
+
+.no-result-text {
+  font-size: 20px;
+  color: rgb(86, 86, 86);
+}
+
+.car-data {
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .result-card {
+    width: 100%;
+  }
+}

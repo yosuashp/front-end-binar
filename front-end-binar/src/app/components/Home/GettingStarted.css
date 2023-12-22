@@ -1,0 +1,37 @@
+/* GETTING STARTED */
+#getting-started {
+  margin-top: 100px;
+}
+#getting-started > div {
+  padding: 64px 20vw;
+  min-height: 325px;
+  align-items: center;
+  border-radius: 13px;
+}
+
+#getting-started h1 {
+  text-align: center;
+}
+
+#getting-started p {
+  margin-bottom: 32px;
+  max-width: 460px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 576px) {
+  /* GETTING STARTED */
+  #getting-started {
+    margin-top: 60px;
+  }
+
+  #getting-started h1 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  #getting-started p {
+    margin-bottom: 40px;
+  }
+}

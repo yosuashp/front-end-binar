@@ -1,0 +1,59 @@
+.testimonial-card {
+  width: 690px;
+  min-height: 270px;
+  height: fit-content;
+  margin: 0 16px;
+
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 70px 32px;
+
+  display: grid !important;
+  grid-template-columns: 120px auto;
+  align-items: center;
+  grid-template-areas:
+    ". star-rating"
+    "profile-pic testimonial-quote"
+    "profile-pic profile-name";
+}
+
+.testimonial-card img {
+  grid-area: profile-pic;
+  align-self: start;
+}
+
+.testimonial-card .rating-container {
+  grid-area: star-rating;
+}
+
+.testimonial-card p {
+  grid-area: testimonial-quote;
+}
+
+.testimonial-card span {
+  grid-area: profile-name;
+}
+
+@media only screen and (max-width: 576px) {
+  .testimonial-card {
+    width: 90vw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "profile-pic"
+      "star-rating"
+      "testimonial-quote"
+      "profile-name";
+    justify-items: center;
+    gap: 24px;
+  }
+
+  .testimonial-card p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .testimonial-card span {
+    position: relative;
+    top: -16px;
+  }
+}

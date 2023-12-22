@@ -1,0 +1,40 @@
+/* SERVICES */
+#services {
+  width: 70vw;
+  margin: 100px 15vw 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+#services ul li {
+  list-style: none;
+  background-image: url("../../../../public/img/service_list_bullet.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 24px;
+  height: 24px;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 576px) {
+  /* SERVICES */
+  #services {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    width: 100%;
+    margin: 0;
+    padding: 60px 16px 10px;
+    gap: 24px;
+  }
+
+  #services img {
+    width: 300px;
+    height: auto;
+    justify-self: center;
+    align-self: end;
+  }
+}

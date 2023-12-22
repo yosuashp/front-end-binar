@@ -1,0 +1,32 @@
+/* WHY US */
+#why-us {
+  margin-top: 100px;
+}
+
+#why-us ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+}
+
+#why-us .card {
+  border-radius: 8px;
+  min-height: 180px;
+  padding: 24px 24px;
+}
+
+#why-us img {
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 576px) {
+  /* WHY US */
+  #why-us {
+    margin-top: 60px;
+    align-items: center;
+  }
+
+  #why-us ul {
+    grid-template-columns: 1fr;
+  }
+}

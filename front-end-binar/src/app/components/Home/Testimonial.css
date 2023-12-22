@@ -1,0 +1,125 @@
+/* TESTIMONIAL */
+#testimonial {
+  margin-top: 100px;
+  align-items: center;
+}
+
+.testimonial-carousel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 40px;
+  grid-template-areas:
+    "carousel carousel"
+    "prev-btn next-btn";
+  gap: 24px;
+}
+
+.slick-list {
+  grid-area: carousel;
+}
+
+.slick-arrow {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border: solid 1px #c4c4c4;
+  background-color: #fff;
+}
+.slick-arrow:hover {
+  transition: 0.3s;
+  border: #5cb85f;
+  background-color: #5cb85f;
+  color: #fff;
+}
+.slick-arrow:hover {
+  background-color: #a347a0;
+  filter: invert(1);
+  transition: 0.2s;
+}
+
+.slick-prev {
+  grid-area: prev-btn;
+  justify-self: end;
+  left: 0;
+}
+.slick-next {
+  grid-area: next-btn;
+  justify-self: start;
+  left: 0;
+  right: 0;
+}
+
+.testimonial-card {
+  width: 690px;
+  min-height: 270px;
+  height: fit-content;
+  margin: 0 16px;
+
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 70px 32px;
+
+  display: grid !important;
+  grid-template-columns: 120px auto;
+  align-items: center;
+  grid-template-areas:
+    ". star-rating"
+    "profile-pic testimonial-quote"
+    "profile-pic profile-name";
+}
+
+.testimonial-card img {
+  grid-area: profile-pic;
+  align-self: start;
+}
+
+.testimonial-card .rating-container {
+  grid-area: star-rating;
+}
+
+.testimonial-card p {
+  grid-area: testimonial-quote;
+}
+
+.testimonial-card span {
+  grid-area: profile-name;
+}
+
+@media only screen and (max-width: 576px) {
+  /* TESTIMONIAL */
+  #testimonial {
+    margin-top: 60px;
+  }
+
+  .slick-list {
+    height: 450px;
+  }
+
+  .testimonial-carousel {
+    gap: 16px;
+  }
+
+  .testimonial-card {
+    width: 90vw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "profile-pic"
+      "star-rating"
+      "testimonial-quote"
+      "profile-name";
+    justify-items: center;
+    gap: 24px;
+  }
+
+  .testimonial-card p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .testimonial-card span {
+    position: relative;
+    top: -16px;
+  }
+}

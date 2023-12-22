@@ -1,0 +1,14 @@
+footer {
+  margin: 100px 0 80px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+  gap: 80px;
+}
+
+@media only screen and (max-width: 576px) {
+  footer {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+    gap: 16px;
+  }
+}
