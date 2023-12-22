@@ -37,8 +37,8 @@ export default function Register() {
       e.preventDefault();
   
       try {
-        const registerResponse = await axios.post(
-          'http://localhost:8000/api/v1/register',
+        await axios.post(
+          'http://18.143.167.74/:8000/api/v1/register',
           { name, email, password }
         );
   
@@ -117,7 +117,7 @@ export default function Register() {
               Create Account
             </Button>
             {/* Link to login page */}
-            <span style={{ fontSize: '20px', fontSize: '20px',
+            <span style={{ fontSize: '20px',
                 display: 'flex',
                 marginBottom: '2%',
                 fontWeight: '600',

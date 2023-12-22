@@ -37,7 +37,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/v1/login',
+        'http://18.143.167.74:8000/api/v1/login',
         { email, password }
       );
 

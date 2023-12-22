@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:8000/api/v1/cars';
+const API_BASE_URL = 'http://18.143.167.74:8000/api/v1/cars';
 
 export default function useList() {
   const navigate = useNavigate();
@@ -51,13 +51,12 @@ export default function useList() {
     navigate(`/update/${record.id}`);
   };
 
-  const fetchCars = async () => {
+  const fetchCars = useCallback(async () => {
     try {
       setLoading(true);
       const response = await axios.get(API_BASE_URL, {
         params: {
           ...params,
-
         },
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token') || ''}`,
@@ -70,11 +69,17 @@ export default function useList() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [params]); // Hanya dependensi params
 
   useEffect(() => {
-    fetchCars();
-  }, [params.page, params.size, params.search]);
+    const fetchData = async () => {
+      await fetchCars();
+    };
+
+    fetchData();
+  }, [fetchCars]);
+
+  
 
   return {
     cars,

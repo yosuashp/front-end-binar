@@ -28,7 +28,7 @@ export default function useAction() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/v1/cars/${params.id}`, {
+        const response = await axios.get(`http://18.143.167.74:8000/api/v1/cars/${params.id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -47,7 +47,7 @@ export default function useAction() {
     try {
       setLoadingSubmit(true);
       const payload = { ...formValues, image: fileItem };
-      const response = await axios.put(`http://localhost:8000/api/v1/cars/${params.id}`, payload, {
+      const response = await axios.put(`http://18.143.167.74:8000/api/v1/cars/${params.id}`, payload, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -70,7 +70,7 @@ export default function useAction() {
         formData.append('image', files[0]);
 
         const response = await axios.post(
-          'http://localhost:8000/api/v1/images',
+          'http://18.143.167.74:8000/api/v1/images',
           formData,
           {
             headers: {

@@ -28,7 +28,7 @@ export default function useAction() {
     try {
       setLoadingSubmit(true);
       const payload = { ...formValues, image: fileItem };
-      const response = await axios.post('http://localhost:8000/api/v1/cars', payload, {
+      const response = await axios.post('http://18.143.167.74:8000/api/v1/cars', payload, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -51,7 +51,7 @@ export default function useAction() {
         formData.append('image', files[0]);
   
         const response = await axios.post(
-          'http://localhost:8000/api/v1/images',
+          'http://18.143.167.74:8000/api/v1/images',
           formData,
           {
             headers: {

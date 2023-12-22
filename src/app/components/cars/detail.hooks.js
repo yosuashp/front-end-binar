@@ -14,7 +14,7 @@ export function useDetail() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:8000/api/v1/cars/${id}`, {
+        const response = await axios.get(`http://18.143.167.74:8000/api/v1/cars/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
