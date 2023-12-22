@@ -37,8 +37,8 @@ export default function Register() {
       e.preventDefault();
   
       try {
-        await axios.post(
-          'http://18.143.167.74/:8000/api/v1/register',
+        const registerResponse = await axios.post(
+          'http://18.143.167.74:8000/api/v1/register',
           { name, email, password }
         );
   
