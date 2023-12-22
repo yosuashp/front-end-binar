@@ -45,7 +45,7 @@ export default function LoginAdmin() {
 
     try {
       const response = await axios.post(
-        'http://18.143.167.74:8000/api/v1/login-superadmin',
+        'https://18.143.167.74/api/v1/login-superadmin',
         { email, password }
       );
       // After a successful login

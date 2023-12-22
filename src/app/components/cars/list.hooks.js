@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://18.143.167.74:8000/api/v1/cars';
+const API_BASE_URL = 'https://18.143.167.74/api/v1/cars';
 
 export default function useList() {
   const navigate = useNavigate();
